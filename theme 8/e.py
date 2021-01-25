@@ -1,15 +1,15 @@
-def func(x, y, xc, yc, r):
-    return (x - xc) * (x - xc) + (y - yc) * (y - yc) <= r * r
+x = float(input())
+y = float(input())
+xc = float(input())
+yc = float(input())
+r = float(input())
 
 
-if __name__ == '__main__':
-    x = float(input())
-    y = float(input())
-    xc = float(input())
-    yc = float(input())
-    r = float(input())
-    func(x, y, xc, yc, r)
-    if func(x, y, xc, yc, r):
-        print("YES")
-    else:
-        print("NO")
+def IsPointInCircle(x, y, xc, yc, r):
+    return (x - xc) ** 2 + (y - yc) ** 2 <= r ** 2
+
+if IsPointInCircle(x, y,xc, yc, r):
+    print("YES")
+else:
+    print("NO")
+
